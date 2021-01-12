@@ -1,37 +1,39 @@
-import React from 'react'
-import { BrowserRouter, Route } from 'react-router-dom'
-import Landing from './Landing'
-import Resume from './resume/Resume'
-import { Container,CssBaseline}  from '@material-ui/core'
-import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import React from "react"
+import { BrowserRouter, Route } from "react-router-dom"
+import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import pink from "@material-ui/core/colors/pink";
+import green from "@material-ui/core/colors/green";
+import Landing from "./Landing"
+import Work from "./Work"
+import Occupations from "./Occupations"
+import Resume from "./resume/Resume"
+import "./App.css"
 
-const themeDark = createMuiTheme({
+/*
+ Nice pink :  main: pink[100]
+*/
+
+
+const theme = createMuiTheme({
   palette: {
-    background: {
-      default: "#14213D"
+    primary: {
+      main: pink[100],
     },
-    text: {
-      primary: "#00000",
-      red: "e63946",
-      light: "f1faee",
-      light2: "a8dadc",
-      dark: "457b9d"
-    }
-  }
+    secondary: {
+      main: green[500],
+    },
+  },
 });
 
 const App = () => {
   return (
     <BrowserRouter>
-      <MuiThemeProvider theme={themeDark}>
-      
-        <CssBaseline />
-        <Container>
-          <Route exact path="/" component={Landing} />
-          <Route exact path="/resume" component={Resume} />
-        </Container>
-       
-      </MuiThemeProvider>
+     <ThemeProvider theme={theme}>
+        <Route exact path="/" component={Landing} />
+        <Route exact path="/work" component={Work} />
+        <Route exact path="/occupations" component={Occupations} />
+        <Route exact path="/resume" component={Resume} />
+        </ThemeProvider>
     </BrowserRouter>
   )
 }
