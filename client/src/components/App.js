@@ -6,8 +6,9 @@ import green from "@material-ui/core/colors/green";
 import Landing from "./Landing"
 import Work from "./Work"
 import Occupations from "./Occupations"
-import Resume from "./resume/Resume"
+import Header from "./Header";
 import "./App.css"
+
 
 /*
  Nice pink :  main: pink[100]
@@ -29,11 +30,11 @@ const App = () => {
   return (
     <BrowserRouter>
      <ThemeProvider theme={theme}>
+       <Route path="/:url" component={Header} />
         <Route exact path="/" component={Landing} />
         <Route exact path="/work" component={Work} />
         <Route exact path="/occupations" component={Occupations} />
-        <Route exact path="/resume" component={Resume} />
-        </ThemeProvider>
+      </ThemeProvider>
     </BrowserRouter>
   )
 }

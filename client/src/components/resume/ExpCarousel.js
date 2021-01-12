@@ -4,7 +4,7 @@ import Carousel from 'react-material-ui-carousel'
 import ReactWordcloud from 'react-wordcloud';
 import experiences from './experiences'
 
-const Resume = () => {
+const ExpCarousel = () => {
 
     const wordCloudOptions = {
         enableTooltip: false,
@@ -44,4 +44,4 @@ const Resume = () => {
     )
 }
 
-export default Resume
+export default (ExpCarousel)
