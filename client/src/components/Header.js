@@ -44,8 +44,8 @@ class Header extends Component {
                   <img src={woccelli} alt="woccelli" height="44"/>
                 </IconButton>
       
-                <Button className={classes.button} color="inherit">Work</Button>
-                <Button color="inherit">Occupations</Button>
+                <Button component={Link} to="/work" className={classes.button} color="inherit">Work</Button>
+                <Button component={Link} to="/occupations" color="inherit">Occupations</Button>
     
               </Toolbar>
             </AppBar>
