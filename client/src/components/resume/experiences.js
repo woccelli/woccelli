@@ -25,7 +25,7 @@ const experiences = [
     {
         name: "Toposanté",
         type: "Web application",
-        description: "Have access to tens of summary sheets about pathologies. Print them ! Send them by email!",
+        description: "Have access to tens of summary sheets about pathologies. Print them ! Send them by email !",
         features: [
             { text: 'MERN', value: 100},
             { text: 'Google OAuth', value: 80},

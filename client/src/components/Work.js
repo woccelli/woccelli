@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import PropTypes from 'prop-types';
-import { Container, Box, Grid } from "@material-ui/core";
-import ExpCarousel from "./resume/ExpCarousel"
+import { Container, Grid } from "@material-ui/core";
+import ExpGrid from "./resume/ExpGrid"
 import ProfileCard from "./resume/ProfileCard";
 import SendResume from "./resume/SendResume";
 import { withStyles } from '@material-ui/core/styles';
@@ -13,16 +13,13 @@ const styles = theme => ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        marginTop: theme.spacing(2),
+        marginBottom: theme.spacing(2),
     },
-    profile: {
+    workGrid: {
         flexGrow: 1,
         display: 'flex',
-    },
-    profileCard: {
-        marginRight: theme.spacing(2)
-    },
-    sendResumeCard: {
-        marginLeft: theme.spacing(2)
+        alignItems: 'center'
     }
 })
 
@@ -31,19 +28,21 @@ class Work extends Component {
     render() {
         const { classes } = this.props;
         return (
-            <Container>
-                <Grid container justify="center" spacing={2} className={classes.profile} xs="auto" sm="auto" md="auto">
-                    <Grid item >
+            <Container className={classes.root}>
+                <Grid container justify="center" spacing={2} className={classes.workGrid} xs="auto" sm="auto" md="auto">
+                    <Grid item xs >
                         <ProfileCard />
                     </Grid>
-                    <Grid item >
+                    <Grid item xs >
                         <SendResume />
                     </Grid>
-                    <Grid item>
+                    <Grid item xs={12}>
                         <DiplomasCard />
                     </Grid>
+                    <Grid item xs={12}>
+                        <ExpGrid />
+                    </Grid>
                 </Grid>
-                <ExpCarousel />
             </Container>
         )
     }

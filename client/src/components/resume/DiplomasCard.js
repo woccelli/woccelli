@@ -32,9 +32,9 @@ class DiplomasCard extends Component {
             <Card className={classes.root}>
                 <School /> 
                 <Typography variant="h5">Diplomas</Typography>
-                <CardContent className={classes.list}>
+                <CardContent className={classes.list} >
                     <Container className={classes.name}>
-                        <List component="nav" aria-label="main mailbox folders">
+                        <List component="nav" >
                             <ListItem>
                                 <ListItemIcon>
                                     <img className={classes.schoolimage} src={insa} alt="insa"/>
