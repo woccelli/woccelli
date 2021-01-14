@@ -24,9 +24,11 @@ const styles = theme => ({
     }
 });
 
-class DiplomasCard extends Component {
+class Diplomas extends Component {
 
     render() {
+
+        
         const { classes } = this.props;
         return (
             <Card className={classes.root}>
@@ -59,8 +61,8 @@ class DiplomasCard extends Component {
     }
 }
 
-DiplomasCard.propTypes = {
+Diplomas.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(DiplomasCard);
+export default withStyles(styles)(Diplomas);

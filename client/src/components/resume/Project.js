@@ -30,7 +30,7 @@ const styles = theme => ({
     }
 });
 
-class ProfileCard extends Component {
+class Profile extends Component {
 
     render() {
         const { classes } = this.props;
@@ -56,8 +56,8 @@ class ProfileCard extends Component {
     }
 }
 
-ProfileCard.propTypes = {
+Profile.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ProfileCard);
+export default withStyles(styles)(Profile);
