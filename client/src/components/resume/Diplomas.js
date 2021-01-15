@@ -16,7 +16,6 @@ const styles = theme => ({
     },
     list: {
         width: '100%',
-        backgroundColor: theme.palette.background.paper,
     },
     schoolimage: {
         width: "150px",

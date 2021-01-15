@@ -1,4 +1,13 @@
 
+.app {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../images/landing.jpg");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .landing {
     margin: 0;
     display: inline-flex;

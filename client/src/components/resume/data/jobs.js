@@ -2,7 +2,7 @@ const jobs = [
     {
         company: "Pharmarep conseil",
         logo: "pharmarep.jpg",
-        startDate: new Date("05/201"),
+        startDate: new Date("05/2020"),
         title: "Full Stack Developer",
         description: "Development of a MERN application for medical workers. The app includes dynamic media rendering, printing and sending in order to easily share information about pathologies with patients."
     },

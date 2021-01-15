@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Card, CardActions, CardContent, Typography,Button, Container} from '@material-ui/core';
 import ReactWordcloud from 'react-wordcloud';
 import { withStyles } from '@material-ui/core/styles';
-
+import { Link } from "react-router-dom"
 
 
 const wordCloudOptions = {
@@ -23,7 +23,10 @@ const styles = theme => ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        padding: theme.spacing(2)
+        padding: theme.spacing(2),
+        background: 'transparent',
+        border: 'none',
+        boxShadow:'none'
     },
     content : {
         margin: 'auto'
@@ -34,11 +37,11 @@ class Profile extends Component {
 
     render() {
         const { classes } = this.props;
-        const { name, description, features } = this.props.project
+        const { name, description, features, shortname } = this.props.project
         return (
             <Card className={classes.root}>
                 <Container className={classes.content}>
-                    <Typography variant="h5">
+                    <Typography variant="h4">
                         {name}
                     </Typography>
                     <Typography  component="p" >
@@ -49,7 +52,9 @@ class Profile extends Component {
                     <ReactWordcloud words={features} options={wordCloudOptions} />
                 </CardContent>
                 <CardActions>
-                <Button size="small">Learn More</Button>
+                    <Link to={`/work/projects/${shortname}`}>
+                        <Button size="small">Learn More</Button>
+                    </Link>
                 </CardActions>
             </Card>
         )

@@ -17,13 +17,19 @@ const styles = theme => ({
     grid: {
         alignItems: 'center'
     },
-    certificate: {
+    card: {
         padding: theme.spacing(1),
-        width: "200px",
+        height: "300px",
+        maxWidth: "250px",
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
+    },
+    content: {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        alignText: 'center'
+        verticalAlign: 'middle'
     },
     logo: {
         paddingTop: theme.spacing(2),
@@ -53,8 +59,8 @@ class Certificates extends Component {
                         const image = reqImages(`./${certificate.logo}`).default
                         return (
                             <Grid item key={i}>
-                                <Card  className={classes.certificate}>
-                                    <CardContent className={classes.certificate}>
+                                <Card className={classes.card}>
+                                    <CardContent className={classes.content}>
                                         <img src={image} alt={certificate.logo} className={classes.logo} />
                                         <Typography align="center" variant="subtitle1"> {certificate.name} </Typography>
                                         <Typography align="center" variant="caption">{certificate.date.toLocaleDateString()}</Typography>

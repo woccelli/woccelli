@@ -1,13 +1,12 @@
 import React, { Component } from "react"
 import PropTypes from 'prop-types';
 import { Container, Grid } from "@material-ui/core";
-import Projects from "./resume/Projects"
 import Profile from "./resume/Profile";
 import SendResume from "./resume/SendResume";
 import { withStyles } from '@material-ui/core/styles';
 import Diplomas from "./resume/Diplomas";
 import Certificates from "./resume/Certificates";
-import Jobs from "./resume/Jobs"
+import Experiences from "./resume/Experiences";
 
 const styles = theme => ({
     root: {
@@ -41,10 +40,7 @@ class Work extends Component {
                         <Diplomas />
                     </Grid>
                     <Grid item xs={12}>
-                        <Projects />
-                    </Grid>
-                    <Grid item xs={12}>
-                        <Jobs />
+                        <Experiences />
                     </Grid>
                     <Grid item xs={12}>
                         <Certificates />
