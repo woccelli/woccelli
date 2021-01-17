@@ -25,23 +25,24 @@ const theme = createMuiTheme({
       paper: 'rgba(255, 255, 255, 0.9)'
     },
     primary: {
-      main: pink[100],
+      main: "#fde2e4", //landing "#F1E3D3"
+      second: "#99c1de"
     },
     secondary: {
-      main: green[500],
+      main: "#7DB5B3",
     },
     timeline: {
       work: {
-        primary: "#9AC4F8",
-        secondary: fade("#9AC4F8", 0.7)
+        primary: "#7DB5B3",
+        secondary: fade("#c5dedd", 0.7)
       },
       project: {
-        primary: pink[100],
-        secondary: fade(pink[100], 0.7)
+        primary: "#FBC5C8",
+        secondary: fade("#fde2e4", 0.7)
       },
       study: {
-        primary: "#99EDCC",
-        secondary: fade("#99EDCC",0.7)
+        primary: "#FFDCC2",
+        secondary: fade("#fff1e6",0.7)
       }
     }
   },

@@ -31,6 +31,7 @@ const styles = theme => ({
         input: {
             margin: theme.spacing(1),
             width: '50ch',
+            color: "secondary"
           },
           button: {
             margin: theme.spacing(1),
@@ -56,7 +57,7 @@ class SendResume extends Component {
                             <p>Enter your email address and I'll ship my PDF resume to you ! </p>
                         </Typography>
                         <form className={classes.form} autoComplete="off">
-                            <TextField fullWidth className={classes.form.input} id="standard-basic" label="your@email.com" required/>
+                            <TextField color="secondary" fullWidth className={classes.form.input} id="standard-basic" label="your@email.com" required/>
                             <IconButton className={classes.form.button} type="submit"><Send/> </IconButton>
                         </form>
                         <Typography>

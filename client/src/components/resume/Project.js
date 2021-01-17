@@ -8,7 +8,7 @@ import { Link } from "react-router-dom"
 
 const wordCloudOptions = {
     enableTooltip: false,
-    colors: ["#219ebc", "#14213D", "#FCA311", "#d62828"],
+    colors: ["#7DB5B3", "#84B4D7", "#9d8189", "#F49690"],
     fontFamily: "Roboto",
     padding: 1,
     rotations: 2,

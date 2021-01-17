@@ -101,10 +101,6 @@ class Jobs extends Component {
                         {experiences.map((experience, i) => {
                             return this.renderExperience(experience, theme, classes)
                         })}
-                        <VerticalTimelineElement
-                            iconStyle={{ background: theme.palette.secondary.main, color: '#fff' }}
-                            icon={<Star />}
-                        />
                     </VerticalTimeline>
                 </CardContent>
             </Card>
