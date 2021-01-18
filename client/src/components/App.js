@@ -1,7 +1,7 @@
 import React from "react"
 import { BrowserRouter, Route } from "react-router-dom"
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
-import { pink, green,  red, yellow } from "@material-ui/core/colors";
+import { pink } from "@material-ui/core/colors";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Landing from "./Landing"
 import Work from "./Work"

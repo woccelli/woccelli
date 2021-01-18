@@ -94,7 +94,7 @@ const experiences = [
             company: "Telamon SAS",
             logo: "telamon.jpg",
             startDate: new Date("10/01/2020"),
-            endDate: new Date("01/2021"),
+            endDate: new Date("01/01/2021"),
             title: "ETL engineer",
             description: "Extract-Transform-Load management, anomaly detection and data maintenance for construction and retail companies"
         }
@@ -102,9 +102,18 @@ const experiences = [
     {
         type: STUDY,
         content: {
-            title: "Master thesis",
+            title: "Double Master's degree",
+            startDate: new Date("10/01/2019"),
+            endDate: new Date("11/01/2020"),
+            description: "Master of Engineering at INSA Lyon and Master of Science at Universität Passau",
+        }
+    },
+    {
+        type: STUDY,
+        content: {
+            title: "Master's thesis",
             startDate: new Date("03/01/2019"),
-            endDate: new Date("09/2020"),
+            endDate: new Date("09/01/2020"),
             description: "Game-theoretical optimizations for honeypot deployment in AMI networks",
             link: "https://github.com/woccelli/game-simulator/blob/master/Game-theoretic%20optimizations%20for%20honeypot%20deployment%20in%20AMI%20networks.pdf"
         }
@@ -115,7 +124,7 @@ const experiences = [
             name: "Game theory simulator",
             shortname: "game-simulator",
             startDate: new Date("03/01/2020"),
-            endDate: new Date("09/2020"),
+            endDate: new Date("09/01/2020"),
             description: "Python game simulator for practical evaluation of game theories",
             features: [
                 { text: 'Python', value: 90},

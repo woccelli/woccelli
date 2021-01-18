@@ -44,7 +44,7 @@ class Jobs extends Component {
                         dateClassName={classes.date}
                         contentStyle={{ background: workcolor.secondary, color: '#fff' }}
                         contentArrowStyle={{ borderRight: `7px solid  ${workcolor.secondary}` }}
-                        date={`${Moment(job.startDate).format('MM/YYYY')} - ${job.endDate ? Moment(job.startDate).format('MM/YYYY') : "Current"}`}
+                        date={`${Moment(job.startDate).format('MM/YYYY')} - ${job.endDate ? Moment(job.endDate).format('MM/YYYY') : "Current"}`}
                         iconStyle={{ background: workcolor.primary, color: '#fff' }}
                         icon={<Work />}
                     >
@@ -60,7 +60,7 @@ class Jobs extends Component {
                             dateClassName={classes.date}
                             contentStyle={{ background: projectcolor.secondary, color: '#fff' }}
                             contentArrowStyle={{ borderRight: `7px solid  ${projectcolor.secondary}` }}
-                            date={`${Moment(project.startDate).format('MM/YYYY')} - ${project.endDate ? Moment(project.startDate).format('MM/YYYY') : "Current"}`}
+                            date={`${Moment(project.startDate).format('MM/YYYY')} - ${project.endDate ? Moment(project.endDate).format('MM/YYYY') : "Current"}`}
                             iconStyle={{ background: projectcolor.primary, color: '#fff' }}
                             icon={<ImportantDevices />}
                         >
@@ -76,7 +76,7 @@ class Jobs extends Component {
                         dateClassName={classes.date}
                         contentStyle={{ background: studycolor.secondary, color: '#fff' }}
                         contentArrowStyle={{ borderRight: `7px solid  ${studycolor.secondary}` }}
-                        date={`${Moment(study.startDate).format('MM/YYYY')} - ${study.endDate ? Moment(study.startDate).format('MM/YYYY') : "Current"}`}
+                        date={`${Moment(study.startDate).format('MM/YYYY')} - ${study.endDate ? Moment(study.endDate).format('MM/YYYY') : "Current"}`}
                         iconStyle={{ background: studycolor.primary, color: '#fff' }}
                         icon={<School />}
                     >

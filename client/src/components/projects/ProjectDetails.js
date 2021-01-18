@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { Grid, Container, List, ListItem, ListItemText, Divider, Button, IconButton } from '@material-ui/core';
 import { GitHub, ArrowBackIos } from "@material-ui/icons"
+import { withStyles } from '@material-ui/core/styles';
+
 import Link from '@material-ui/core/Link';
 
-const useStyles = makeStyles((theme) => ({
+const styles = theme => ({
     mainFeaturedPost: {
         position: 'relative',
         backgroundColor: theme.palette.grey[800],
@@ -42,14 +43,18 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         backgroundColor: theme.palette.background.paper,
     }
-}));
+});
 
-export default function ProjectDetails(props) {
-    console.log(props)
-    const classes = useStyles();
-    const { project } = props;
+class ProjectDetails extends Component {
+
+    componentDidMount() {
+        window.scroll(0,0)
+    }
+
+    render () {
+    const { classes } = this.props;
+    const { project } = this.props;
     const image = require(`../../images/projects/${project.image}`).default
-    console.log(image)
     return (
         <div>
             <Paper className={classes.mainFeaturedPost} style={{ backgroundImage: `url(${image})` }}>
@@ -59,7 +64,7 @@ export default function ProjectDetails(props) {
                 <Grid container xl spacing={3} className={classes.mainFeaturedPostContent}>
                     <Grid item>
                         <Typography component="h1" variant="h3" color="inherit" gutterBottom>
-                           <IconButton onClick={() => props.history.goBack()} color="primary"><ArrowBackIos/></IconButton> {project.name}
+                           <IconButton onClick={() => this.props.history.goBack()} color="primary"><ArrowBackIos/></IconButton> {project.name}
                         </Typography>
                         <Typography variant="h5" color="inherit" paragraph>
                             {project.description}
@@ -97,7 +102,7 @@ export default function ProjectDetails(props) {
                                 return (
                                     <div key={i}>
                                         <ListItem >
-                                            <ListItemText primary={item.title} />
+                                            <ListItemText primary={<Typography variant="h6">{item.title}</Typography>} />
                                         </ListItem>
                                         <Divider />
                                         <ListItem >
@@ -111,9 +116,12 @@ export default function ProjectDetails(props) {
                 </Grid>
             </Container>
         </div>
-    );
+    )
+                        }
 }
 
 ProjectDetails.propTypes = {
     post: PropTypes.object,
 };
+
+export default withStyles(styles)(ProjectDetails);

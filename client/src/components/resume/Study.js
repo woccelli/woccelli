@@ -35,9 +35,12 @@ class Study extends Component {
                     </Typography>
                 </CardContent>
                 <CardActions>
+                    {link ?
                     <a href={link} target="_blank" rel="noopener noreferrer">
                         <Button>SEE DOCUMENT</Button>
                     </a>
+                    :
+                    <div></div>}
                 </CardActions>
             </Card>
         )
