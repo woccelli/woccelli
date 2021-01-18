@@ -25,7 +25,7 @@ const theme = createMuiTheme({
       paper: 'rgba(255, 255, 255, 0.9)'
     },
     primary: {
-      main: "#fde2e4", //landing "#F1E3D3"
+      main: "#fde2e4", 
       second: "#99c1de"
     },
     secondary: {

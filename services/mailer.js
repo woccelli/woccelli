@@ -5,13 +5,10 @@ const DOMAIN = 'mg.woccelli.com';
 module.exports = sendResume = async (dest, template) => {
     const mg = mailgun({apiKey: keys.mailgunKey, domain: DOMAIN, host: "api.eu.mailgun.net"});
     const data = {
-        from: 'contact@woccelli.com',
+        from: 'william.occelli@gmail.com',
         to: dest,
-        subject: "William Occelli's resume",
+        subject: "My resume",
         html: template
     };
     await mg.messages().send(data);
 }
-
-
-

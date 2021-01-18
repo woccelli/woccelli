@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import { Card, CardContent, Typography } from '@material-ui/core';
-import { Work, Star, ImportantDevices, School } from "@material-ui/icons"
+import { Work, ImportantDevices, School } from "@material-ui/icons"
 import { withStyles } from '@material-ui/core/styles';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';

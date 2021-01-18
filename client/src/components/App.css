@@ -74,3 +74,18 @@
         opacity: 0.7;
     }
   }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .Occupations-logo {
+      animation: Occupations-logo-spin infinite 5s linear;
+    }
+  }
+
+  @keyframes Occupations-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

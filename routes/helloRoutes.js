@@ -6,11 +6,12 @@ module.exports = app => {
         res.send({msg: 'Hello World !'})
     })
 
-    app.post('/send-resume', async (req, res) => {
+    app.post('/api/send-resume', async (req, res) => {
         const { dest } = req.body
         try {
             await sendResume(dest, resumeTemplate())
-            res.sendStatus(200)
+            console.log(dest)
+            res.send(dest)
         } catch (err) {
             console.log(err)
             res.status(422).send(err)
