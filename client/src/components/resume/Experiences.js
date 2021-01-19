@@ -10,7 +10,6 @@ import { JOB, PROJECT, STUDY } from './data/experiences'
 import Project from "./Project"
 import Job from "./Job"
 import Study from "./Study"
-import { pink } from '@material-ui/core/colors';
 import Moment from 'moment'
 
 const styles = theme => ({
@@ -91,7 +90,6 @@ class Jobs extends Component {
 
     render() {
         const { classes, theme } = this.props
-        console.log(theme.palette.primary.main, pink[100])
         return (
             <Card className={classes.root}>
                 <Work />

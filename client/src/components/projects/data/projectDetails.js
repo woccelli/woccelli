@@ -92,28 +92,28 @@ const projectDetails = [
         image: "toposante1.jpg",
         link: "https://github.com/woccelli/pharma-app",
         what:
-            <Typography>
-                <Typography align="justify">
+            <Typography align="justify">
+                <Typography >
                     A MERN (MongoDB, Express.js, React.js, Node.js) application allowing subscribed users to print or send by email PDF summary sheets to patients with pathologies.
           </Typography>
-                <Typography align="justify">
+                <Typography>
                     A user can create an account, login, subscribe, search for a specific summary sheet about a pathology, dynamically vizualize it, print it or send it to an email address with a personalized header.
                     </Typography>
-                <Typography align="justify">
+                <Typography>
                     The administrator of the app has way more functionalities. The administrator can add content to the app by creating new summary sheets via a dynamic form. The dynamic form instantly renders the final PDF version of the sheet.
                     The administrator has access to the list of sheets and users along with some visual information about their activity on the app (e.g: number of sheets sent per day). The admin can also modify or delete sheets and offer subscription to users.
                     </Typography>
-                <Typography align="justify">
+                <Typography>
                     The app also naturally implements basic features such as account information update, password reinitialization or account deletion.
                     </Typography>
 
             </Typography>,
         why:
             <Typography align="justify">
-                <Typography align="justify">
+                <Typography>
                     The idea behind this app is to provide medical workers with a simple, efficient and reliable way to share information about a pathology. The goal is to create visually attractive summary sheets that patients can easily understand, with the certainty that the content of the sheet is reliable, since provided by an acknowledged medical expert.
                 </Typography>
-                <Typography align="justify">
+                <Typography>
                     In addition, we make sure that no information is kept about the patient. This latter is totally anonymous in our application, ensuring the absence of any kind of tracking. Patients are sure to remain unknown.
                 </Typography>
             </Typography>,
@@ -170,38 +170,36 @@ const projectDetails = [
         image: "emaily1.jpg",
         link: "https://github.com/woccelli/emaily",
         what:
-            <Typography>
-                <Typography align="justify">
+            <Typography align="justify">
+                <Typography >
                     A MERN (MongoDB, Express.js, React.js, Node.js) application where authenticated Google users pay for credits allowing them to create email survey campaigns. The survey campaigns are automatically sent to a list of email recipicients. The answers of the recipients are gathered and displayed in the application.
                 </Typography>
-                <Typography align="justify">
+                <Typography>
                     The user can hence, authenticate with its Google account, buy credits with its credit card, create a survey by specifying the content of the email (yes or no question) and a list of email addesses, send the survey and visualise how many recipients answered 'yes' or answered 'no'.
                 </Typography>
             </Typography>,
         why:
-            <Typography>
-                <Typography align="justify">
-                    I implemented this app in the scope of a Udemy certification course by Stephen Grider. It allowed me to train on features such as Google OAuth, Stripe payments, Webhooks and deployment.
-            </Typography>
+            <Typography align="justify">
+                I implemented this app in the scope of a Udemy certification course by Stephen Grider. It allowed me to train on features such as Google OAuth, Stripe payments, Webhooks and deployment.
             </Typography>,
         who: <Grid container style={{ flexDirection: "column" }}>
-        <Grid item >
-            <Typography>
-                Model, structure and concept:
+            <Grid item >
+                <Typography>
+                    Model, structure and concept:
         </Typography>
-        </Grid>
-        <Grid item>
-            {whoTile("Udemy - Stephen Grider", "udemy.png")}
-        </Grid>
-        <Grid item >
-            <Typography>
-                Implementation:
+            </Grid>
+            <Grid item>
+                {whoTile("Udemy - Stephen Grider", "udemy.png")}
+            </Grid>
+            <Grid item >
+                <Typography>
+                    Implementation:
         </Typography>
-        </Grid>
-        <Grid item>
-            {whoTile("William Occelli", "me.png")}
-        </Grid>
-    </Grid>,
+            </Grid>
+            <Grid item>
+                {whoTile("William Occelli", "me.png")}
+            </Grid>
+        </Grid>,
         how: [
             {
                 title: "Stack",
@@ -240,17 +238,17 @@ const projectDetails = [
         image: "woccelli1.jpg",
         link: "https://github.com/woccelli/woccelli",
         what:
-            <Typography>
-                <Typography align="justify">
+            <Typography align="justify">
+                <Typography >
                     A MERN (MongoDB, Express.js, React.js, Node.js) application that displays an interactive Resume, blog posts and that allows users to play mini-games.
                 </Typography>
-                <Typography align="justify">
+                <Typography>
                     The app is divided into two parts: "Work" and "Occupations", which initials are the same as "William Occelli".
                 </Typography>
-                <Typography align="justify">
+                <Typography>
                     The "Work" part of the application is inspired by public personal websites. It includes a Resume (formation, experience etc.) and a portfolio with project presentations. It implements features such as email sending, dynamic wordclouds and an interactive timeline.
                 </Typography>
-                <Typography align="justify">
+                <Typography>
                     The "Occupations" part of the application is more diversified. It features blog posts and mini-games. However, it is not yet production ready.
                 </Typography>
             </Typography>,
@@ -267,15 +265,15 @@ const projectDetails = [
             </Typography>
             </Typography>,
         who: <Grid container style={{ flexDirection: "column" }}>
-        <Grid item >
-            <Typography>
-                Implementation:
+            <Grid item >
+                <Typography>
+                    Implementation:
         </Typography>
-        </Grid>
-        <Grid item>
-            {whoTile("William Occelli", "me.png")}
-        </Grid>
-    </Grid>,
+            </Grid>
+            <Grid item>
+                {whoTile("William Occelli", "me.png")}
+            </Grid>
+        </Grid>,
         how: [
             {
                 title: "Stack",

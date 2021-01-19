@@ -29,7 +29,7 @@ class Work extends Component {
         const { classes } = this.props;
         return (
             <Container className={classes.root}>
-                <Grid container justify="center" spacing={2} className={classes.workGrid} xs="auto" sm="auto" md="auto">
+                <Grid container justify="center" spacing={2} className={classes.workGrid}>
                     <Grid item xs >
                         <Profile />
                     </Grid>

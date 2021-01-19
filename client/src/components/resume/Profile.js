@@ -5,7 +5,6 @@ import { LinkedIn, GitHub, Work, Home, Cake } from "@material-ui/icons"
 import { withStyles } from '@material-ui/core/styles';
 import profilePic from "../../images/me.png"
 import Moment from 'react-moment';
-import moment from 'moment';
 
 const styles = theme => ({
     root: {
@@ -34,7 +33,8 @@ const styles = theme => ({
     carac: {
         display: 'flex',
         alignItems: 'center',
-        flexDirection: 'row',  
+        flexDirection: 'row',
+        margin: theme.spacing(3)
     },
     profileIcon: {
         marginRight: theme.spacing(1)
@@ -45,7 +45,7 @@ class Profile extends Component {
 
     render() {
         const { classes } = this.props;
-        const birthDate = moment("03/03/1997 19:30")
+        const birthDate = new Date("03/03/1997 19:30")
         return (
             <Card className={classes.root}>
                 <Avatar
@@ -61,16 +61,16 @@ class Profile extends Component {
                     </Container>
                     <Container>
                         <Typography className={classes.carac}>
-                            <Work className={classes.profileIcon}/>
-                        <p>IT Engineer, Fullstack Dev</p>
+                            <Work className={classes.profileIcon} />
+                        IT Engineer, Fullstack Dev
                     </Typography>
                         <Typography className={classes.carac}>
-                            <Home className={classes.profileIcon}/>
-                            <p>Lyon, France</p>
+                            <Home className={classes.profileIcon} />
+                            Lyon, France
                     </Typography>
                         <Typography className={classes.carac}>
-                            <Cake className={classes.profileIcon}/>
-                            <p><Moment date={birthDate} interval={60000} durationFromNow format /></p>
+                            <Cake className={classes.profileIcon} />
+                            <Moment date={birthDate} interval={60000} durationFromNow format />
                         </Typography>
                     </Container>
                 </CardContent>

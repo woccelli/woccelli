@@ -24,7 +24,7 @@ class Job extends Component {
 
     render() {
         const { classes } = this.props;
-        const { company, logo, title, description } = this.props.job
+        const { company, title, description } = this.props.job
         return (
             <Card className={classes.root}>
                 <CardContent className={classes.content}>

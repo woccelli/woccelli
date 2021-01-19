@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from "react-redux"
 import PropTypes from 'prop-types';
 import { Card, CardContent, Typography, TextField, Container, IconButton, FormControl, FormHelperText, CircularProgress, Grid, Button } from '@material-ui/core';
-import { Send, Check, Error } from "@material-ui/icons"
+import { Send, Check, Error, GetApp } from "@material-ui/icons"
 import { withStyles } from '@material-ui/core/styles';
 import * as actions from '../../actions/index'
 
@@ -53,15 +53,15 @@ const styles = theme => ({
     item: {
         display: 'flex',
         alignItems: 'center',
-        flexDirection: 'row',  
+        flexDirection: 'row',
     },
     icon: {
         marginRight: theme.spacing(1)
     },
-    inputContainer : {
+    inputContainer: {
         marginBottom: theme.spacing(4)
     },
-    text : {
+    text: {
         marginBottom: theme.spacing(2)
     }
 });
@@ -92,51 +92,51 @@ class SendResume extends Component {
             case "loading":
                 return (
                     <div>
-                        <Container className={classes.name}>
+                        <Container className={classes.text}>
                             <Typography variant="h6">
                                 Want my resume just for yourself?
                         </Typography>
                         </Container>
                         <Container className={classes.loading} >
-                            <CircularProgress color="secondary"/>
+                            <CircularProgress color="secondary" />
                         </Container>
                     </div>)
             case "sent":
                 return <Container>
                     <Grid container className={classes.success} >
                         <Typography className={classes.item}>
-                            <Check color="secondary" className={classes.icon}/>
+                            <Check color="secondary" className={classes.icon} />
                              The resume has been sent to: {this.state.email}
                         </Typography>
                         <Grid item className={classes.item} xs={12}><Button onClick={() => this.props.resetSendResume()}> Send new</Button></Grid>
                     </Grid>
                 </Container>
-            case "limit": 
-                    return (
+            case "limit":
+                return (
                     <Container>
-                    <Grid container className={classes.success} >
-                        <Typography className={classes.item}>
-                            <Error className={classes.icon}/>
-                            Sorry, the limit of requests for this IP address has been reached. Try again in 1 hour. This limit is set to avoid unnecessary traffic. 
+                        <Grid container className={classes.success} >
+                            <Typography className={classes.item}>
+                                <Error className={classes.icon} />
+                            Sorry, the limit of requests for this IP address has been reached. Try again in 1 hour. This limit is set to avoid unnecessary traffic.
                         </Typography>
-                        <Grid item className={classes.item} xs={12}><Button onClick={() => this.props.resetSendResume()}> Send new</Button></Grid>
-                    </Grid>
-                </Container>
-                    )
+                            <Grid item className={classes.item} xs={12}><Button onClick={() => this.props.resetSendResume()}> Send new</Button></Grid>
+                        </Grid>
+                    </Container>
+                )
             default:
                 return (
                     <div>
-                        <Container className={classes.name}>
+                        <Container className={classes.text}>
                             <Typography variant="h6">
                                 Want my resume just for yourself?
                     </Typography>
                         </Container>
                         <Container className={classes.inputContainer}>
                             <Typography>
-                                <p>Enter your email address and I'll ship my PDF resume to you ! </p>
+                                Enter your email address and I'll ship my PDF resume to you !
                             </Typography>
                             <form className={classes.form} onSubmit={this.onSubmit} autoComplete="off">
-                               
+
                                 <FormControl fullWidth>
                                     <TextField
                                         id="email"
@@ -154,11 +154,11 @@ class SendResume extends Component {
                         </Container>
                         <Container>
                             <Typography className={classes.text}>
-                                OR you can also download my resume here :
+                                You can also download my resume here :
                             </Typography>
                             <a href="/api/download-resume" download>
-                                <Button>download</Button> 
-                                </a>
+                                <Button> <GetApp/>download</Button>
+                            </a>
                         </Container>
                     </div>)
         }

@@ -14,7 +14,7 @@ module.exports = app => {
           "Sorry, the limit of requests for this IP address has been reached, try again in 1 hour. This limit is fixed to avoid unnecessary traffic."
     });
 
-    app.post('/api/send-resume',  async (req, res) => {
+    app.post('/api/send-resume', sendResumeLimiter, async (req, res) => {
         const { dest } = req.body
         try {
             await sendResume(dest, resumeTemplate())
