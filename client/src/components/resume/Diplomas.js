@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
-import { Card, CardContent, Typography, Container, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
+import { Card, CardContent, Typography, Container, List, ListItem, ListItemIcon, ListItemText} from '@material-ui/core';
 import { School } from "@material-ui/icons"
 import { withStyles } from '@material-ui/core/styles';
 import insa from "../../images/insa.png"
@@ -16,6 +16,7 @@ const styles = theme => ({
     },
     list: {
         width: '100%',
+        alignItems: 'center'
     },
     schoolimage: {
         width: "150px",
@@ -27,20 +28,20 @@ class Diplomas extends Component {
 
     render() {
 
-        
+
         const { classes } = this.props;
         return (
             <Card className={classes.root}>
-                <School /> 
+                <School />
                 <Typography variant="h5">Diplomas</Typography>
                 <CardContent className={classes.list} >
                     <Container className={classes.name}>
-                        <List component="nav" >
+                        <List >
                             <ListItem>
                                 <ListItemIcon>
                                     <img className={classes.schoolimage} src={insa} alt="insa"/>
                                 </ListItemIcon>
-                                <ListItemText  
+                                <ListItemText 
                                 primary="Institut National des Sciences Appliquées de Lyon"
                                 secondary="Master of Engineering - Computer Science and Information Technologies"/>
                             </ListItem>

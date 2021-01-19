@@ -53,7 +53,7 @@ class Profile extends Component {
                 </CardContent>
                 <CardActions>
                     <Link to={`/work/projects/${shortname}`}>
-                        <Button size="small">Learn More</Button>
+                        <Button size="large">Learn More</Button>
                     </Link>
                 </CardActions>
             </Card>

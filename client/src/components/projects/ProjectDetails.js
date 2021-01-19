@@ -104,7 +104,7 @@ class ProjectDetails extends Component {
                                         <ListItem >
                                             <ListItemText primary={<Typography variant="h6">{item.title}</Typography>} />
                                         </ListItem>
-                                        <Divider />
+                                        <Divider></Divider>
                                         <ListItem >
                                                 {item.content}
                                         </ListItem>

@@ -12,16 +12,24 @@ const experiences = [
             startDate: new Date("12/01/2020"),
             description: "Well... this website",
             features: [
-                { text: 'MERN', value: 90},
+                { text: 'React.js', value: 100},
+                { text: 'Express', value: 70},
                 { text: 'Redux', value: 80},
-                { text: 'Material-UI', value: 80},
+                { text: 'Material-UI', value: 100},
                 { text: 'Mailgun', value: 60},
                 { text: 'Heroku', value: 50},
-                { text: 'Chartjs', value: 40},
-                { text: 'vertical-timeline-component', value: 30},
+                { text: 'vertical-timeline-component', value: 50},
                 { text: 'moment', value: 40},
-                { text: 'carousel', value: 50},
+                { text: 'carousel', value: 30},
                 { text: 'react-wordlcoud', value: 70},
+                { text: 'Resume', value: 40},
+                { text: 'express-rate-limit', value: 60},
+                { text: 'personal website', value: 50},
+                { text: 'mini-games', value: 40},
+                { text: 'blog posts', value: 40},
+                { text: 'Work & Occupations', value: 60},
+                { text: 'William Occelli', value: 50},
+
             ]
         }
     },
@@ -32,7 +40,7 @@ const experiences = [
             logo: "pharmarep.jpg",
             startDate: new Date("05/01/2020"),
             title: "Full Stack Developer",
-            description: "Development of a MERN application for medical workers. The app includes dynamic media rendering, printing and sending in order to easily share information about pathologies with patients."
+            description: "Development of a MERN application for medical workers. The app includes dynamic media rendering, printing and sending in order to easily share information and recommandations about pathologies"
         }
     },
     {
@@ -56,7 +64,11 @@ const experiences = [
                 { text: 'Axios', value: 30},
                 { text: 'Mongoose', value: 30},
                 { text: 'Passport', value: 30},
-                { text: 'Chartjs', value: 40}
+                { text: 'Chartjs', value: 40},
+                { text: 'Medical', value: 50},
+                { text: 'Pathologies', value: 30},
+                { text: 'Advices', value: 20},
+                { text: 'Health', value: 30},
             ]
         }
     },
@@ -67,7 +79,8 @@ const experiences = [
             shortname: "emaily",
             type: "Web application",
             startDate: new Date("11/01/2020"),
-            description: "Create and send surveys to thousands of email addresses",
+            endDate: new Date("12/01/2020"),
+            description: "Create and send surveys to thousands of email recipients",
             features: [
                 { text: 'MERN', value: 100},
                 { text: 'Google OAuth', value: 80},
@@ -160,7 +173,7 @@ const experiences = [
             startDate: new Date("05/01/2019"),
             endDate: new Date("09/01/2019"),
             title: "Data scientist",
-            description: "Management of a data science project. From the data sources to the results display, I had to understand the functional need, pre-proccess the data, benchmark supervised and unsupervised models, tune the models and communicate about the whole process to executives."
+            description: "Management of a data science project. From the data sources to the results display, I had to understand the functional need, pre-proccess the data, benchmark supervised and unsupervised models, tune the models and communicate about the whole process to executives"
         }
     },
     {

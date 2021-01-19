@@ -35,7 +35,7 @@ const projectDetails = [
         what:
             <Typography align="justify">
                 <Typography>
-                    A Python application implemented in TDD that allows to simulate evolutionary games in which several types of players confront for the survival of their population.
+                    A Python application implemented in TDD that allows the simulation of evolutionary games in which several types of players confront for the survival of their population.
             </Typography>
                 <Typography>
                     This game simulator is designed to reproduce situations that are depicted in Game theories (non-cooperative game theory with no pure equilibrium). The ultimate goal is to simualte interactions between network administrators (defenders) and potential hackers (attackers).
@@ -47,7 +47,7 @@ const projectDetails = [
                     The game simulator computes thousands of games with varying populations in order to extract the best honeypot proportion for defenders.
             </Typography>
                 <Typography>
-                    To have more information and better understand the context, you can read my <a target="_blank" rel="noopener noreferrer" href="https://github.com/woccelli/game-simulator/blob/master/Game-theoretic%20optimizations%20for%20honeypot%20deployment%20in%20AMI%20networks.pdf">master's thesis</a>
+                    To have more information and a better understanding of the context, you can read my <a target="_blank" rel="noopener noreferrer" href="https://github.com/woccelli/game-simulator/blob/master/Game-theoretic%20optimizations%20for%20honeypot%20deployment%20in%20AMI%20networks.pdf">master's thesis</a>.
                 </Typography>
             </Typography>,
         why:
@@ -94,14 +94,14 @@ const projectDetails = [
         what:
             <Typography>
                 <Typography align="justify">
-                    A MERN (MongoDB, Express.js, React.js, Nodejs) application allowing subscribed users to print or send by email PDF summary sheets to patients with pathologies.
+                    A MERN (MongoDB, Express.js, React.js, Node.js) application allowing subscribed users to print or send by email PDF summary sheets to patients with pathologies.
           </Typography>
                 <Typography align="justify">
                     A user can create an account, login, subscribe, search for a specific summary sheet about a pathology, dynamically vizualize it, print it or send it to an email address with a personalized header.
                     </Typography>
                 <Typography align="justify">
-                    The administrator of the app has way more functionalities. The administrator can add content to the app by creating new summary sheets via a dynamic form which is instantly rendering the final PDF version of the sheet.
-                    The administrator has access to the list of sheets and users along with some visual information about their activity on the app (e.g: number of sheet sent per day). The admin can also modify or delete sheets and offer subscription to users.
+                    The administrator of the app has way more functionalities. The administrator can add content to the app by creating new summary sheets via a dynamic form. The dynamic form instantly renders the final PDF version of the sheet.
+                    The administrator has access to the list of sheets and users along with some visual information about their activity on the app (e.g: number of sheets sent per day). The admin can also modify or delete sheets and offer subscription to users.
                     </Typography>
                 <Typography align="justify">
                     The app also naturally implements basic features such as account information update, password reinitialization or account deletion.
@@ -139,7 +139,7 @@ const projectDetails = [
         how: [
             {
                 title: "Stack",
-                content: <Typography> MongoDB, Express.js, React.js, Nodejs </Typography>
+                content: <Typography> MongoDB, Express.js, React.js, Node.js </Typography>
             },
             {
                 title: "Structure",
@@ -147,7 +147,7 @@ const projectDetails = [
             },
             {
                 title: "Authentication",
-                content: <Typography> Passport.js JWT - Authorized client routes with react-router-dom - Authorized server routes with passport authentication.</Typography>
+                content: <Typography> Passport.js JWT - Authorized client routes with react-router-dom - Authorized server routes with passport authentication</Typography>
             },
             {
                 title: "Mailing",
@@ -166,13 +166,13 @@ const projectDetails = [
     {
         name: "Emaily",
         shortname: "emaily",
-        description: "Create and send surveys to thousands of email addresses",
+        description: "Create and send surveys to thousands of email recipients",
         image: "emaily1.jpg",
         link: "https://github.com/woccelli/emaily",
         what:
             <Typography>
                 <Typography align="justify">
-                    A MERN (MongoDB, Express.js, React.js, Nodejs) application where authenticated Google users pay for credits allowing them to create email survey campaigns that are automatically sent to a list of email recipicients. The answers of the recipients are gathered and displayed in the application.
+                    A MERN (MongoDB, Express.js, React.js, Node.js) application where authenticated Google users pay for credits allowing them to create email survey campaigns. The survey campaigns are automatically sent to a list of email recipicients. The answers of the recipients are gathered and displayed in the application.
                 </Typography>
                 <Typography align="justify">
                     The user can hence, authenticate with its Google account, buy credits with its credit card, create a survey by specifying the content of the email (yes or no question) and a list of email addesses, send the survey and visualise how many recipients answered 'yes' or answered 'no'.
@@ -205,7 +205,7 @@ const projectDetails = [
         how: [
             {
                 title: "Stack",
-                content: <Typography> MongoDB, Express.js, React.js, Nodejs </Typography>
+                content: <Typography> MongoDB, Express.js, React.js, Node.js </Typography>
             },
             {
                 title: "Structure",
@@ -242,13 +242,13 @@ const projectDetails = [
         what:
             <Typography>
                 <Typography align="justify">
-                    A MERN (MongoDB, Express.js, React.js, Nodejs) application that displays an interactive Resume, blog posts and that allows users to play mini-games.
+                    A MERN (MongoDB, Express.js, React.js, Node.js) application that displays an interactive Resume, blog posts and that allows users to play mini-games.
                 </Typography>
                 <Typography align="justify">
-                    The app is divided in two parts: "Work" and "Occupations", which initials are the same as "William Occelli".
+                    The app is divided into two parts: "Work" and "Occupations", which initials are the same as "William Occelli".
                 </Typography>
                 <Typography align="justify">
-                    The "Work" part of the application is inspired by public personal websites with a Resume (formation, experience etc.) and project presentations as a portfolio. It implements features such as email sending, dynamic wordclouds and an interactive timeline.
+                    The "Work" part of the application is inspired by public personal websites. It includes a Resume (formation, experience etc.) and a portfolio with project presentations. It implements features such as email sending, dynamic wordclouds and an interactive timeline.
                 </Typography>
                 <Typography align="justify">
                     The "Occupations" part of the application is more diversified. It features blog posts and mini-games. However, it is not yet production ready.
@@ -257,7 +257,7 @@ const projectDetails = [
         why:
             <Typography align="justify">
                 <Typography>
-                    After my master's degree at INSA Lyon and Universität Passau, my profile matched with IT engineers job offers which were oriented towards data manipulation. However, after a few months in this omain, I realised that I was more attracted to content creation. I always have plenty of delirious (and sometimes promising) ideas, it would be a shame to elude that part of me.
+                    After my master's degree at INSA Lyon and Universität Passau, my profile matched with IT engineers job offers which were oriented towards data manipulation. However, after a few months in this domain, I realised that I was more attracted to content creation. I always have plenty of delirious (and sometimes promising) ideas, it would be a shame to elude that part of me.
             </Typography>
                 <Typography>
                     Hence, I needed to orient my career in a way that allowed me to design and create content. That's why I chose Fullstack engineering. This ever-evolving domain is both technical and wide. I can create the content I wish to and learn plenty of new things.
@@ -279,7 +279,7 @@ const projectDetails = [
         how: [
             {
                 title: "Stack",
-                content: <Typography> MongoDB, Express.js, React.js, Nodejs </Typography>
+                content: <Typography> MongoDB, Express.js, React.js, Node.js </Typography>
             },
             {
                 title: "Structure",
@@ -291,7 +291,7 @@ const projectDetails = [
             },
             {
                 title: "Client",
-                content: <Typography> React Material-UI (a lot) and React Redux.</Typography>
+                content: <Typography> React Material-UI (a lot) and React Redux</Typography>
             },
             {
                 title: "Media",

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from "react-redux"
 import PropTypes from 'prop-types';
 import { Card, CardContent, Typography, TextField, Container, IconButton, FormControl, FormHelperText, CircularProgress, Grid, Button } from '@material-ui/core';
-import { Send, Check } from "@material-ui/icons"
+import { Send, Check, Error } from "@material-ui/icons"
 import { withStyles } from '@material-ui/core/styles';
 import * as actions from '../../actions/index'
 
@@ -57,6 +57,12 @@ const styles = theme => ({
     },
     icon: {
         marginRight: theme.spacing(1)
+    },
+    inputContainer : {
+        marginBottom: theme.spacing(4)
+    },
+    text : {
+        marginBottom: theme.spacing(2)
     }
 });
 
@@ -105,6 +111,18 @@ class SendResume extends Component {
                         <Grid item className={classes.item} xs={12}><Button onClick={() => this.props.resetSendResume()}> Send new</Button></Grid>
                     </Grid>
                 </Container>
+            case "limit": 
+                    return (
+                    <Container>
+                    <Grid container className={classes.success} >
+                        <Typography className={classes.item}>
+                            <Error className={classes.icon}/>
+                            Sorry, the limit of requests for this IP address has been reached. Try again in 1 hour. This limit is set to avoid unnecessary traffic. 
+                        </Typography>
+                        <Grid item className={classes.item} xs={12}><Button onClick={() => this.props.resetSendResume()}> Send new</Button></Grid>
+                    </Grid>
+                </Container>
+                    )
             default:
                 return (
                     <div>
@@ -113,7 +131,7 @@ class SendResume extends Component {
                                 Want my resume just for yourself?
                     </Typography>
                         </Container>
-                        <Container>
+                        <Container className={classes.inputContainer}>
                             <Typography>
                                 <p>Enter your email address and I'll ship my PDF resume to you ! </p>
                             </Typography>
@@ -134,6 +152,14 @@ class SendResume extends Component {
                                 <IconButton className={classes.form.button} type="submit"><Send /></IconButton>
                             </form>
                         </Container>
+                        <Container>
+                            <Typography className={classes.text}>
+                                OR you can also download my resume here :
+                            </Typography>
+                            <a href="/api/download-resume" download>
+                                <Button>download</Button> 
+                                </a>
+                        </Container>
                     </div>)
         }
     }
@@ -153,7 +179,7 @@ class SendResume extends Component {
 }
 
 SendResume.propTypes = {
-    SendResume: PropTypes.func.isRequired,
+    sendResume: PropTypes.func.isRequired,
     resume: PropTypes.object.isRequired,
     classes: PropTypes.object.isRequired,
 };

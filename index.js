@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const app = express();
 app.use(bodyParser.json())
 
-require('./routes/helloRoutes')(app)
+require('./routes/resumeRoutes')(app)
 
 if (process.env.NODE_ENV === 'production') {
     // Express will surve up production assets
