@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
-import { Card, CardActions, CardContent, Typography,Button, Container} from '@material-ui/core';
+import { Card, CardActions, CardContent, Typography,Button, Container, Hidden} from '@material-ui/core';
 import ReactWordcloud from 'react-wordcloud';
 import { withStyles } from '@material-ui/core/styles';
 import { Link } from "react-router-dom"
@@ -29,6 +29,7 @@ const styles = theme => ({
         boxShadow:'none'
     },
     content : {
+        width:"105%",
         margin: 'auto'
     }
 });
@@ -49,7 +50,9 @@ class Profile extends Component {
                     </Typography>
                     </Container>
                 <CardContent className={classes.content}>
+                    <Hidden xsDown>
                     <ReactWordcloud words={features} options={wordCloudOptions} />
+                    </Hidden>
                 </CardContent>
                 <CardActions>
                     <Link to={`/work/projects/${shortname}`}>

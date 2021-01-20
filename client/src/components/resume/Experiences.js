@@ -24,6 +24,11 @@ const styles = theme => ({
         background: theme.palette.primary.main,
         color: '#fff'
     },
+    element: {
+        [theme.breakpoints.down('sm')]: {
+            width: "85%"
+        }
+    },
     date : {
         color: "black"
     }
@@ -39,7 +44,7 @@ class Jobs extends Component {
                 var workcolor = colorPalette.work
                 return (
                     <VerticalTimelineElement key={experience.content.title}
-                        className="vertical-timeline-element--work"
+                    className="vertical-timeline-element--work"
                         dateClassName={classes.date}
                         contentStyle={{ background: workcolor.secondary, color: '#fff' }}
                         contentArrowStyle={{ borderRight: `7px solid  ${workcolor.secondary}` }}
@@ -55,7 +60,7 @@ class Jobs extends Component {
                     var projectcolor = colorPalette.project
                     return (
                         <VerticalTimelineElement key={experience.content.name}
-                            className="vertical-timeline-element--work"
+                        className="vertical-timeline-element--work"
                             dateClassName={classes.date}
                             contentStyle={{ background: projectcolor.secondary, color: '#fff' }}
                             contentArrowStyle={{ borderRight: `7px solid  ${projectcolor.secondary}` }}

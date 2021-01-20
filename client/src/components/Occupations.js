@@ -29,9 +29,9 @@ class Occupations extends Component {
             <Container className={classes.root}>
                 <Grid container className={classes.container}>
                     <Grid container className={classes.item}>
-                        <Grid item className={classes.text}><Typography color="primary" variant="h2">WORK IN PROGRESS...</Typography></Grid>                            
+                        <Grid item className={classes.text}><Typography color="primary" align="center" variant="h2">WORK IN PROGRESS...</Typography></Grid>                            
                         <Grid item><img className="Occupations-logo" src={logo} alt="logo" height="150px"></img></Grid>
-                        <Grid item className={classes.text}><Typography color="primary" variant="subtitle1">Don't worry, I'll publish content asap.</Typography></Grid>    
+                        <Grid item className={classes.text}><Typography color="primary" align="center" variant="subtitle1">Don't worry, I'll publish content asap.</Typography></Grid>    
                     </Grid>
                 </Grid>
             </Container>

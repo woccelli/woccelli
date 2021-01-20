@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
-import { Card, CardContent, Typography, List, ListItem, ListItemIcon, ListItemText, Grid, Switch, Chip, Checkbox } from '@material-ui/core';
+import { Card, CardContent, Typography, List, ListItem, ListItemIcon, Grid, Switch, Chip, Checkbox } from '@material-ui/core';
 import { School, Settings,FavoriteBorder, Favorite } from "@material-ui/icons"
 import { withStyles } from '@material-ui/core/styles';
 import insa from "../../images/insa.png"
@@ -12,30 +12,58 @@ const styles = theme => ({
         paddingBottom: theme.spacing(2),
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     diplomas: {
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center'
+        alignItems: 'center',
+
     },
-    list: {
+    listItem: {
+        display: "flex",
+        width: "100%",
+        flexDirection: "row",
+        alignItems: "center",
+        [theme.breakpoints.down('sm')]: {
+            flexDirection: 'column',
+            justifyContent: 'center'
+        }
+    },
+    title: {
         display: "flex",
         width: "100%",
         flexDirection: "column",
-        alignItems: "center"
+        alignItems: "center",
     },
     schoolimage: {
         width: "150px",
-        marginRight: theme.spacing(2)
+        marginRight: theme.spacing(2),
+        [theme.breakpoints.down('sm')]: {
+            marginTop: theme.spacing(2)
+        }
+    },
+    text : {
+        display: "flex",
+        flexDirection: "column",
+        [theme.breakpoints.down('sm')]: {
+            marginTop: theme.spacing(2),
+            alignItems: "center",
+            textAlign: 'center',
+        }
+    },
+    languages: {
+        [theme.breakpoints.down('sm')]: {
+            marginTop: theme.spacing(2),
+            flexDirection: "column",
+            alignItems: "center",
+            textAlign: 'center',
+        }
     },
     settings: {
         display: 'flex',
         flexDirection: 'column',
     },
-    second: {
-        paddingRight: theme.spacing(4)
-    }
 });
 
 class Diplomas extends Component {
@@ -86,36 +114,45 @@ class Diplomas extends Component {
             <Card className={classes.root}>
                 <Grid container >
                     <Grid item md={8} xs={12} className={classes.diplomas}>
-                        <CardContent className={classes.list} >
-                            <Grid item className={classes.list}>
+                        <CardContent>
+                            <Grid item className={classes.title}>
                                 <School />
-                                <Typography variant="h5">Diplomas</Typography>
                             </Grid>
                             <Grid item>
                                 <List >
-                                    <ListItem>
+                                    <ListItem className={classes.listItem}>
                                         <ListItemIcon>
                                             <img className={classes.schoolimage} src={insa} alt="insa" />
                                         </ListItemIcon>
-                                        <ListItemText
-                                            primary="Institut National des Sciences Appliquées de Lyon"
-                                            secondary="Master of Engineering - Computer Science and Information Technologies" />
+                                        <Grid item className={classes.text}>
+                                        <Typography variant="h6">
+                                        Institut National des Sciences Appliquées de Lyon
+                                        </Typography>
+                                        <Typography variant="overline">
+                                            Master of Engineering - Computer Science and Information Technologies
+                                        </Typography>
+                                        </Grid>
                                     </ListItem>
-                                    <ListItem>
+                                    <ListItem className={classes.listItem}>
                                         <ListItemIcon>
                                             <img className={classes.schoolimage} src={passau} alt="passau" />
                                         </ListItemIcon>
-                                        <ListItemText
-                                            primary="Universität Passau"
-                                            secondary="Master of Science - Information and Communication Systems" />
+                                        <Grid item className={classes.text}>
+                                        <Typography variant="h6">
+                                            Universität Passau
+                                        </Typography>
+                                        <Typography variant="overline">
+                                            Master of Science - Information and Communication Systems
+                                        </Typography>
+                                        </Grid>
                                     </ListItem>
                                 </List>
                             </Grid>
                         </CardContent>
                     </Grid>
                     <Grid item md={4} xs={12} className={classes.second}>
-                        <CardContent className={classes.list}>
-                            <Grid item className={classes.list}>
+                        <CardContent>
+                            <Grid item className={classes.title}>
                                 <Settings />
                             </Grid>
                             <Grid item className={classes.settings}>
@@ -126,7 +163,7 @@ class Diplomas extends Component {
                                     <ListItem>
                                     <Switch checked={this.state.activatedSecond} /><Chip variant="outlined" color={this.state.colorSecond} label={this.state.activatedSecond ? <Typography>Vehicle activated</Typography> : <Typography>Vehicle</Typography>} />
                                     </ListItem>
-                                    <ListItem>
+                                    <ListItem className={classes.languages}>
                                     <Checkbox icon={<FavoriteBorder />} checkedIcon={<Favorite />} checked={this.state.iconFirst} name="checkedH1" /> French (native)
                                     <Checkbox icon={<FavoriteBorder />} checkedIcon={<Favorite />} checked={this.state.iconSecond} name="checkedH2" />  English (fluent)
                                     <Checkbox icon={<FavoriteBorder />} checkedIcon={<Favorite />} checked={this.state.iconThird} name="checkedH3" /> German (experimented)

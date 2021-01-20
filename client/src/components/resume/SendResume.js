@@ -9,8 +9,6 @@ import * as actions from '../../actions/index'
 const styles = theme => ({
     root: {
         minWidth: 275,
-        marginTop: theme.spacing(3),
-        marginBottom: theme.spacing(3),
         paddingTop: theme.spacing(2),
         paddingBottom: theme.spacing(2),
         display: 'flex',
