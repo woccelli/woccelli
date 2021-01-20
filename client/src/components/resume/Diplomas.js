@@ -36,10 +36,18 @@ const styles = theme => ({
         flexDirection: "column",
         alignItems: "center",
     },
+    image:{
+        [theme.breakpoints.down('sm')]: {
+            display: 'flex',
+            flexDirection: "column",
+            alignItems:"center"
+        }
+    },
     schoolimage: {
         width: "150px",
         marginRight: theme.spacing(2),
         [theme.breakpoints.down('sm')]: {
+            margin:'auto',
             marginTop: theme.spacing(2)
         }
     },
@@ -121,7 +129,7 @@ class Diplomas extends Component {
                             <Grid item>
                                 <List >
                                     <ListItem className={classes.listItem}>
-                                        <ListItemIcon>
+                                        <ListItemIcon className={classes.image}>
                                             <img className={classes.schoolimage} src={insa} alt="insa" />
                                         </ListItemIcon>
                                         <Grid item className={classes.text}>
