@@ -69,7 +69,7 @@ class ProjectDetails extends Component {
                             <Typography variant="h5" color="inherit" paragraph>
                                 {project.description}
                             </Typography>
-                            <Link variant="subtitle1" href={project.link}>
+                            <Link variant="subtitle1" href={project.link}  target="_blank" rel="noopener noreferrer">
                                 <Button color="primary" ><GitHub style={{ marginRight: "10px" }} /> Github </Button>
                             </Link>
                         </Grid>

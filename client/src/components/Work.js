@@ -14,7 +14,7 @@ const styles = theme => ({
         flexDirection: 'column',
         alignItems: 'center',
         marginTop: theme.spacing(2),
-        marginBottom: theme.spacing(2),
+        overflowX: "hidden"
     },
     workGrid: {
         flexGrow: 1,

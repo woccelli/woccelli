@@ -75,10 +75,10 @@ class Profile extends Component {
                     </Container>
                 </CardContent>
                 <CardActions>
-                    <IconButton size="small" href="https://www.linkedin.com/in/william-occelli/">
+                    <IconButton size="small" href="https://www.linkedin.com/in/william-occelli/" target="_blank" rel="noopener noreferrer">
                         <LinkedIn />
                     </IconButton>
-                    <IconButton size="small" href="https://github.com/woccelli">
+                    <IconButton size="small" href="https://github.com/woccelli" target="_blank" rel="noopener noreferrer">
                         <GitHub />
                     </IconButton>
                 </CardActions>

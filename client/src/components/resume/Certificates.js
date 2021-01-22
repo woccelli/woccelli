@@ -84,7 +84,7 @@ class Certificates extends Component {
                 <Assignment />
                 <Typography variant="h5">Certificates</Typography>
                 <CardContent>
-                    <Carousel>
+                    <Carousel navButtonsAlwaysVisible autoPlay={false}>
                         {
                             certificates.map((certificateGroup, i) => <Item key={i} item={certificateGroup} />)
                         }
