@@ -9,8 +9,6 @@ export const sendResume = dest => async dispatch => {
     } catch {
         dispatch({ type: SEND_RESUME, payload: { status: "limit" } })
     }
-
-
 }
 
 export const resetSendResume = () => dispatch => {

@@ -47,7 +47,7 @@ class Certificates extends Component {
 
         function Item(props) {
             const certificateGroup = props.item
-            const reqImages = require.context("../../images/certificates", false)
+            const reqImages = require.context("../../../images/certificates", false)
             return (
                 <Grid container justify="center" spacing={2} className={classes.grid}>
                     <Grid item xs={12}>

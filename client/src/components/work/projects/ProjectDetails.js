@@ -54,7 +54,7 @@ class ProjectDetails extends Component {
     render() {
         const { classes } = this.props;
         const { project } = this.props;
-        const image = require(`../../images/projects/${project.image}`).default
+        const image = require(`../../../images/projects/${project.image}`).default
         return (
             <div>
                 <Paper className={classes.mainFeaturedPost} style={{ backgroundImage: `url(${image})` }}>

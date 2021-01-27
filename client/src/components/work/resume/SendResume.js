@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Card, CardContent, Typography, TextField, Container, IconButton, FormControl, FormHelperText, CircularProgress, Grid, Button } from '@material-ui/core';
 import { Send, Check, Error, GetApp } from "@material-ui/icons"
 import { withStyles } from '@material-ui/core/styles';
-import * as actions from '../../actions/index'
+import * as actions from '../../../actions/index'
 
 const styles = theme => ({
     root: {

@@ -4,13 +4,14 @@ import { createMuiTheme, responsiveFontSizes, ThemeProvider } from "@material-ui
 import { pink } from "@material-ui/core/colors";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Landing from "./Landing"
-import Work from "./Work"
-import Occupations from "./Occupations"
+import Work from "./work/Work"
+import Occupations from "./occupations/Occupations"
 import Header from "./Header";
-import ProjectDetails from "./projects/ProjectDetails"
-import projectDetails from "./projects/data/projectDetails"
+import ProjectDetails from "./work/projects/ProjectDetails"
+import projectDetails from "./work/projects/data/projectDetails"
 import { fade } from '@material-ui/core/styles/colorManipulator';
 import "./App.css"
+import QuoteFinder from "./occupations/quoteFinder/QuoteFinder";
 
 
 /*
@@ -25,7 +26,7 @@ let theme = createMuiTheme({
       paper: 'rgba(255, 255, 255, 0.9)'
     },
     primary: {
-      main: "#fde2e4", 
+      main: "#fde2e4",
       second: "#99c1de"
     },
     secondary: {
@@ -42,7 +43,7 @@ let theme = createMuiTheme({
       },
       study: {
         primary: "#FFDCC2",
-        secondary: fade("#fff1e6",0.7)
+        secondary: fade("#fff1e6", 0.7)
       }
     }
   },
@@ -60,13 +61,13 @@ const App = () => {
           <Route exact path="/work" component={Work} />
           <Route exact path="/occupations" component={Occupations} />
         </div>
+        <Route exact path="/occupations/quote-finder" component={QuoteFinder}/>
         {projectDetails.map((project, i) => {
-            return (
-              <Route key={i} exact path={`/work/projects/${project.shortname}`} render={(props) => (<ProjectDetails {...props} project={project} />)} />
-            )
-          })
-
-          }
+          return (
+            <Route key={i} exact path={`/work/projects/${project.shortname}`} render={(props) => (<ProjectDetails {...props} project={project} />)} />
+          )
+        })
+        }
       </ThemeProvider>
     </BrowserRouter>
   )

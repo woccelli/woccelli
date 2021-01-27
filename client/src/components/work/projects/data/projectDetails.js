@@ -11,7 +11,7 @@ const whoTile = (name, avatarImg) => {
             }}>
                 <Grid item xs={3}>
                     {avatarImg ?
-                        <Avatar alt="Profile image" src={require(`../../../images/projects/${avatarImg}`).default} />
+                        <Avatar alt="Profile image" src={require(`../../../../images/projects/${avatarImg}`).default} />
                         :
                         <Avatar><Business /></Avatar>
                     }

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { Card, CardContent, Typography, List, ListItem, ListItemIcon, Grid, Switch, Chip, Checkbox } from '@material-ui/core';
 import { School, Settings,FavoriteBorder, Favorite } from "@material-ui/icons"
 import { withStyles } from '@material-ui/core/styles';
-import insa from "../../images/insa.png"
-import passau from "../../images/passau.png"
+import insa from "../../../images/insa.png"
+import passau from "../../../images/passau.png"
 
 const styles = theme => ({
     root: {

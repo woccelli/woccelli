@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Card, CardActions, CardContent, Typography, IconButton, Avatar, Container } from '@material-ui/core';
 import { LinkedIn, GitHub, Work, Home, Cake } from "@material-ui/icons"
 import { withStyles } from '@material-ui/core/styles';
-import profilePic from "../../images/me.png"
+import profilePic from "../../../images/me.png"
 import Moment from 'react-moment';
 
 const styles = theme => ({
