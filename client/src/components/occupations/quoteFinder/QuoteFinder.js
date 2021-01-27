@@ -86,7 +86,7 @@ class QuoteFinder extends Component {
                                 <IconButton onClick={() => this.props.history.goBack()} color="primary"><ArrowBackIos /></IconButton> Trouvez des répliques !
                             </Typography>
 
-                            <Link variant="subtitle1" href="https://woccelli.com/occupations/quote-finder" target="_blank" rel="noopener noreferrer">
+                            <Link variant="subtitle1" href="https://github.com/woccelli/quote-finder" target="_blank" rel="noopener noreferrer">
                                 <Button color="primary" ><GitHub style={{ marginRight: "10px" }} /> Github </Button>
                             </Link>
                         </Grid>
